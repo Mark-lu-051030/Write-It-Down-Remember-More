@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Write It Down, Remember More — Poster‑Blog</title>
+  <meta name="description" content="A public-friendly, one-page advisory on why handwriting boosts learning — and how to use it." />
+  <style>
+    :root{
+      --bg:#0f172a;          /* slate-900 */
+      --panel:#111827;       /* gray-900 */
+      --muted:#94a3b8;       /* slate-400 */
+      --text:#e5e7eb;        /* gray-200 */
+      --accent:#06b6d4;      /* cyan-500 */
+      --accent2:#818cf8;     /* indigo-400 */
+      --success:#22c55e;     /* green-500 */
+      --warning:#f59e0b;     /* amber-500 */
+      --danger:#ef4444;      /* red-500 */
+      --card:#0b1224;        /* deep slate */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b1021, #0f172a 35%, #0a0f1e);color:var(--text);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
+    a{color:var(--accent)}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header.hero{position:relative;border-radius:24px;padding:42px 28px;background:radial-gradient(1200px 600px at 90% -20%, rgba(6,182,212,.25), transparent 60%), radial-gradient(900px 700px at -10% -30%, rgba(129,140,248,.25), transparent 55%), linear-gradient(180deg, #0d1328, #0b1224);box-shadow: 0 20px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.04)}
+    .hero h1{font-size: clamp(28px, 5vw, 56px); line-height:1.05; margin:0 0 12px; letter-spacing: .2px}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.08);background:rgba(15,23,42,.6);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+    .actions{display:flex;flex-wrap:wrap; gap:10px;margin-top:18px}
+    button.btn{cursor:pointer;border:none;border-radius:999px;padding:12px 16px;font-weight:700}
+    .btn-accent{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001018}
+    .btn-ghost{background:rgba(255,255,255,.06);color:var(--text);border:1px solid rgba(255,255,255,.08)}
+
+    /* grid cards */
+    .grid{display:grid; gap:18px}
+    @media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:linear-gradient(180deg, #0d1427, #0b1224); border:1px solid rgba(255,255,255,.06); border-radius:20px; padding:18px 18px 20px; box-shadow: 0 8px 30px rgba(0,0,0,.35)}
+    .card h3{margin:10px 0 8px;font-size:20px}
+    .card p{margin:8px 0;color:var(--muted)}
+
+    .section{margin:36px 0}
+    .section h2{font-size: clamp(22px, 3.2vw, 34px); margin:0 0 12px}
+    .kicker{color:var(--accent2); font-weight:800; text-transform:uppercase; font-size:12px; letter-spacing:.14em}
+
+    .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(6,182,212,.12); color:#a2ecff; border:1px solid rgba(6,182,212,.25); padding:6px 10px; border-radius:999px; font-weight:700; font-size:12px; letter-spacing:.06em}
+
+    .myth{background:linear-gradient(180deg,#1a1020,#140c18); border:1px solid rgba(255,255,255,.06); border-radius:20px; padding:20px}
+    .myth h3{margin:0 0 8px; color:#ffd2e7}
+    .check{color:#bef7c8}
+    .x{color:#ffcfd0}
+
+    .tips{display:grid; gap:14px}
+    @media(min-width:700px){.tips{grid-template-columns:repeat(2,1fr)}}
+    .tip{display:flex; gap:12px; align-items:flex-start; background:linear-gradient(180deg,#0f152a,#0c1223); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:14px}
+
+    .sources{color:var(--muted); font-size:14px; line-height:1.5}
+    .sources li{margin:6px 0}
+
+    /* icon bubbles */
+    .icon{width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; border-radius:999px; background:rgba(129,140,248,.18); border:1px solid rgba(129,140,248,.35)}
+    .icon svg{width:16px;height:16px}
+
+    footer{opacity:.85; font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:8px; flex-wrap:wrap; padding:8px 2px 32px}
+
+    /* print-friendly */
+    @media print{
+      body{background:white;color:black}
+      header.hero{background:white; box-shadow:none; border:2px solid #222}
+      .card, .myth, .tip{background:white; box-shadow:none; border:1.5px solid #333}
+      a{color:#0000ee}
+      .btn-accent,.btn-ghost{display:none}
+    }
+
+    :root[data-theme="light"]{
+      --bg:#f8fafc; --panel:#ffffff; --muted:#475569; --text:#0f172a;
+      --accent:#06b6d4; --accent2:#6366f1; --success:#16a34a; --warning:#d97706; --danger:#dc2626; --card:#ffffff;
+    }
+    :root[data-theme="light"] body{
+      background:linear-gradient(180deg,#ffffff, #f8fafc 40%, #eef2ff);
+      color:var(--text);
+    }
+    :root[data-theme="light"] header.hero{
+      background:
+        radial-gradient(1200px 600px at 90% -20%, rgba(6,182,212,.12), transparent 60%),
+        radial-gradient(900px 700px at -10% -30%, rgba(99,102,241,.12), transparent 55%),
+        linear-gradient(180deg, #ffffff, #f8fafc);
+      box-shadow: 0 10px 30px rgba(2,6,23,.08), inset 0 1px 0 rgba(2,6,23,.04);
+    }
+    :root[data-theme="light"] .badge{ background:rgba(2,6,23,.04); border:1px solid rgba(2,6,23,.08); color:var(--muted) }
+    :root[data-theme="light"] .btn-ghost{ background:rgba(2,6,23,.04); color:var(--text); border:1px solid rgba(2,6,23,.08) }
+    :root[data-theme="light"] .card,
+    :root[data-theme="light"] .myth,
+    :root[data-theme="light"] .tip{
+      background:#fff; border:1px solid rgba(2,6,23,.08); box-shadow: 0 8px 20px rgba(2,6,23,.06);
+    }
+
+    /* --- Visualization widget (no JS) --- */
+    .viz { margin-top: 10px; position: relative; }
+
+    /* hide radios (we use labels as buttons) */
+    .viz .viz-toggle { position: absolute; opacity: 0; pointer-events: none; }
+
+    /* image stage */
+    .viz-stage {
+      position: relative;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: rgba(255,255,255,.04);
+    }
+    .viz-stage img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: contain;
+      opacity: 0; transition: opacity .25s ease;
+    }
+
+    /* controls */
+    .viz-controls { display: flex; gap: 8px; margin-top: 10px; }
+    .viz-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 8px 12px; border-radius: 999px; cursor: pointer;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06);
+      font-weight: 700; font-size: 14px;
+    }
+
+    /* OFFLOAD card toggles */
+    #offload-1:checked ~ .viz-stage .offload-img-1 { opacity: 1; }
+    #offload-2:checked ~ .viz-stage .offload-img-2 { opacity: 1; }
+    #offload-1:checked ~ .viz-controls label[for="offload-1"],
+    #offload-2:checked ~ .viz-controls label[for="offload-2"] {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: #001018; border-color: transparent;
+    }
+
+    /* DEEPER card toggles */
+    #deeper-1:checked ~ .viz-stage .deeper-img-1 { opacity: 1; }
+    #deeper-2:checked ~ .viz-stage .deeper-img-2 { opacity: 1; }
+    #deeper-1:checked ~ .viz-controls label[for="deeper-1"],
+    #deeper-2:checked ~ .viz-controls label[for="deeper-2"] {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color:#001018; border-color:transparent;
+    }
+
+    /* WHOLE-BRAIN card toggles */
+    #whole-1:checked ~ .viz-stage .whole-img-1 { opacity: 1; }
+    #whole-2:checked ~ .viz-stage .whole-img-2 { opacity: 1; }
+    #whole-1:checked ~ .viz-controls label[for="whole-1"],
+    #whole-2:checked ~ .viz-controls label[for="whole-2"] {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color:#001018; border-color:transparent;
+    }
+
+    /* Light theme border tweak */
+    :root[data-theme="light"] .viz-stage { border-color: rgba(2,6,23,.12); background:#f8fafc; }
+    
+    .viz-stage img.static{
+      position: static; width:100%; height:auto; opacity:1; display:block;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero" role="banner">
+      <h1>Write It Down, Remember More</h1>
+      <p style="max-width:1060px;color:var(--muted);font-size:18px;line-height:1.6;margin:6px 0 10px">As an old Chinese proverb says "好记性不如烂笔头", commonly translated as "a good memory is not as reliable as a bad writing brush" claims that handwriting—done right—helps you learn more than trying to keep it all in your head. This page is a quick <em>poster</em> up top and a deeper <em>blog</em> below. We explain <strong>how</strong> handwriting helps (offloading, deeper processing, whole‑brain engagement), what the <strong>experiments</strong> found, and exactly <strong>how to use</strong> it in real life.</p>
+      <div class="actions">
+        <button class="btn btn-accent" onclick="window.print()">Print / Save as PDF</button>
+        <button class="btn btn-ghost" id="shareBtn">Share</button>
+        <button class="btn btn-ghost" onclick="document.getElementById('tips').scrollIntoView({behavior:'smooth'})">Jump to 5 Quick Habits</button>
+        <button class="btn btn-ghost" id="themeToggle">Light theme</button>
+        <button class="btn btn-ghost" id="author">Made by <a href="https://www.linkedin.com/in/mingxuan-lu-0072922b8">Mark</a> on <time datetime="2025-08-10">October 10, 2025</time></button>
+      </div>
+    </header>
+
+    <section class="section">
+      <details>
+        <summary><strong>TL;DR</strong>(click to reveal)</summary>
+        <p><strong>Handwriting helps most when it’s generative</strong> (your words, tiny diagrams) and
+        when info load is high. Copying verbatim ≠ learning.</p>
+      </details>
+    </section>
+
+    <section class="section">
+      <div class="kicker">3 reasons it works</div>
+      <h2>Why handwriting boosts learning</h2>
+      <p>Recent research reveals why physically writing things down can boost your learning - but it's not as simple as "writing always wins." The magic happens when three key factors align:</p>
+      <div class="grid grid-3" aria-label="three reasons">
+        <article class="card">
+          <div class="pill" aria-label="offload">Offload mental clutter</div>
+          <h3>🔄 Free up your working memory</h3>
+
+          <div class="viz" role="group" aria-label="Offload visualization">
+            <input class="viz-toggle" type="radio" name="viz-offload" id="offload-2" checked>
+            <input class="viz-toggle" type="radio" name="viz-offload" id="offload-1">
+            
+            <div class="viz-stage" aria-live="polite">
+              <img class="offload-img-2" src="Img\sketchplanations-cognitive-offloading_bad.png"
+                   alt="Working memory overloaded when holding everything in mind">
+              <img class="offload-img-1" src="Img\sketchplanations-cognitive-offloading_good.png"
+                   alt="Working memory freed by offloading notes to paper">
+            </div>
+          
+            <div class="viz-controls">
+              <label for="offload-2" class="viz-btn" aria-label="Show view 2">no offload</label>
+              <p>--------></p>
+              <label for="offload-1" class="viz-btn" aria-label="Show view 1">with offload</label>
+              
+            </div>
+          </div>
+
+          <p>Your brain can only juggle a few things at once. Writing moves details to paper so you can focus on understanding—not just holding info.</p>
+        </article>
+        <article class="card">
+          <div class="pill" aria-label="deeper processing">Deeper processing</div>
+          <h3>🎯 Summarize, don’t transcribe</h3>
+          <p>You can’t handwrite every word, so you naturally pick key ideas and put them in your own words. That thinking strengthens memory.</p>
+            
+        </article>
+        <article class="card">
+          <div class="pill" aria-label="whole-brain">Whole‑brain engagement</div>
+          <h3>🧠 More senses, stronger traces</h3>
+          <p>Handwriting combines movement, touch, and vision. More of your brain joins in—creating richer, longer‑lasting memories.</p>
+          <div class="viz" role="group" aria-label="Whole-brain visualization">
+            <input class="viz-toggle" type="radio" name="viz-whole" id="whole-1" checked>
+            <input class="viz-toggle" type="radio" name="viz-whole" id="whole-2">
+
+            <div class="viz-stage" aria-live="polite">
+              <img class="whole-img-1" src="Img\BRAIN1.png" alt="Typing: fewer systems involved">
+              <img class="whole-img-2" src="Img\BRAIN2.png" alt="Handwriting: language, motor, visual systems engaged">
+            </div>
+          
+            <div class="viz-controls">
+              <label for="whole-1" class="viz-btn">✍️</label>
+              <label for="whole-2" class="viz-btn">⌨️</label>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">myth vs. fact</div>
+      <div class="myth">
+        <h2 style="margin-top:0">Don’t just copy — <span class="check">write to learn</span></h2>
+        <div class="grid" style="grid-template-columns:1fr; gap:12px">
+          <div class="card" style="background:transparent;border-color:rgba(255,255,255,.08)">
+            <h3 class="x">Myth: Copying everything makes it stick.</h3>
+            <p>Verbatim notes feel productive but skip the thinking that builds memory.</p>
+          </div>
+          <div class="card" style="background:transparent;border-color:rgba(255,255,255,.08)">
+            <h3 class="check">Fact: Transforming beats transcribing.</h3>
+            <p>Summaries, sketches, and tiny explanations in your own words lead to better understanding and recall than word‑for‑word copying.</p>
+          </div>
+          <div class="card" style="background:transparent;border-color:rgba(255,255,255,.08)">
+            <h3 class="check">Context matters.</h3>
+            <p>Writing helps most when there’s a lot to remember. For 2–3 simple facts, keeping it in your head can be fine—save handwriting for the chunky stuff.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tips">
+      <div class="kicker">do this tonight</div>
+      <h2>5 quick habits to try</h2>
+      <div class="tips" role="list">
+        <div class="tip" role="listitem">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div>
+            <strong>Three‑bullet rule.</strong>
+            <div style="color:var(--muted)">After a lecture or article, close it and handwrite three bullets from memory.</div>
+          </div>
+        </div>
+        <div class="tip" role="listitem">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M6 12h12"/></svg>
+          </span>
+          <div>
+            <strong>One‑minute mind‑map.</strong>
+            <div style="color:var(--muted)">Sketch quick bubbles that link today’s ideas to last week’s.</div>
+          </div>
+        </div>
+        <div class="tip" role="listitem">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/><path d="M20 22v-7"/><path d="M20 15A7 7 0 1 0 6.84 6.84L20 20"/></svg>
+          </span>
+          <div>
+            <strong>Teach‑back in the margins.</strong>
+            <div style="color:var(--muted)">Explain one idea as if to a 12‑year‑old. If you can’t, that’s your study target.</div>
+          </div>
+        </div>
+        <div class="tip" role="listitem">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 20h10"/></svg>
+          </span>
+          <div>
+            <strong>Paper quiz.</strong>
+            <div style="color:var(--muted)">Write what you recall, then check the source and fill the gaps.</div>
+          </div>
+        </div>
+        <div class="tip" role="listitem">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M4 10h16"/><path d="M4 15h10"/></svg>
+          </span>
+          <div>
+            <strong>Five‑line summary.</strong>
+            <div style="color:var(--muted)">End the day by compressing a page of notes into five lines.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">for the curious</div>
+      <h2>📊 What the research shows — in simple summaries</h2>
+      <div class="grid" style="grid-template-columns:1fr; gap:14px">
+        <article class="card">
+          <details>
+            <summary><strong>Generative Writing Beats Copying</strong></summary>
+            <h3>Mueller &amp; Oppenheimer (2014) — Longhand vs. laptop note‑taking</h3>
+            <p><strong>Method:</strong> University students watched short talks and took notes either by hand or on a laptop. Laptop notes contained more words but were often <em>verbatim</em> copies. Longhand notes were shorter and more selective.</p>
+            <p><strong>Result:</strong> Both groups did similarly on test of simple facts, but the longhand group did <em>better on conceptual questions</em>. Even when told not to take verbatim notes, laptop users still tended to copy, and performance didn’t improve. Also, higher similarity of copied note to the talk shows <em>lower</em> conceptual learning.</p>
+            <p><strong>What it means for you:</strong> The win isn’t “pen vs. keyboard,” it’s <em>generative writing vs. copying</em>. Summarize, paraphrase, sketch quick diagrams.</p>
+          </details>
+        </article>
+        <article class="card">
+          <details>
+            <summary><strong>Freeing Short-Term Memory Works Better Than Keep Everything in Your Mind</strong></summary>
+            <h3>Morrison &amp; Richmond (2020) — Offloading short‑term memory</h3>
+            <p><strong>Method:</strong> Participants memorized letter sequences either with the option to write things down or with memory only.</p>
+            <p><strong>Result:</strong> As list length grew (e.g., 6–10 letters), the writing‑allowed group pulled ahead. Writing acted as <em>cognitive offloading</em>, freeing working memory to track more items. At very low loads (2–4 items), performance was similar, so offloading mattered less.</p>
+            <p><strong>What it means for you:</strong> Use paper when there is a lot of information—lectures, multi‑step problems, planning. For tiny lists, mental recall is fine.</p>
+          </details>
+        </article>
+        <article class="card">
+          <details>
+            <summary><strong>Handwriting Beats keyboard note taking for recall</strong></summary>
+            <h3>Mangen et al. (2015) — Handwriting vs. keyboard for recall</h3>
+            <p><strong>Method:</strong> Compared recalling words written by hand versus on a keyboard.</p>
+            <p><strong>Result:</strong> Handwriting supported <em>better word recall</em>, consistent with the idea that forming letters and the slower pace create stronger encoding.</p>
+            <p><strong>What it means for you:</strong> When learning vocabulary or definitions, handwrite them (and test yourself) rather than typing passively.</p>
+          </details>
+          </article>
+        <article class="card">
+          <details>
+            <summary><strong>Active Note taking with Summaries, Organization, and Connections Beats Passive Copying.</strong></summary>
+            <h3>Jansen, Lakens &amp; IJsselsteijn (2017) — Review of note‑taking</h3>
+            <p><strong>What they reviewed:</strong> The <em>encoding</em> (learn while writing) and <em>external‑storage</em> (review later) benefits of notes, plus how <em>cognitive load</em> affects outcomes.</p>
+            <p><strong>Takeaway:</strong> <em>Active</em> note‑taking (summaries, organization, connections) beats <em>passive</em> transcription. Writing can also consume resources; if it turns into copying, you lose the encoding benefit.</p>
+          </details>
+          </article>
+        <article class="card">
+          <details>
+            <summary><strong>⚠️ Intense Neuroscience Stuff: Writing Use the Brain More</strong></summary>
+            <p><strong>Van der Weel &amp; Van der Meer (2023):</strong> High‑density EEG showed <em>widespread</em> connectivity during handwriting compared to typewriting, implying richer sensorimotor‑language coupling in learning contexts.</p>
+            <p><strong>Marano et al. (2025):</strong> A review of neuroimaging studies indicates handwriting engages language areas (e.g., Broca’s), visual word form regions, motor/premotor cortex, parietal areas, cerebellum—supporting <em>multisensory encoding</em>.</p>
+            <p><strong>What it means for you:</strong> Physically forming letters (pen or stylus) provides tactile/kinesthetic cues that help cement memories—especially for complex ideas and new symbols.</p>
+          </details>
+        </article>
+      </div>
+      <div class="section" style="margin-top:18px">
+        <h2>Nuances &amp; limitations</h2>
+        <div class="grid" style="grid-template-columns:1fr; gap:12px">
+          <div class="card"><strong>Low information load:</strong> If there are only a couple of items, mental recall can match writing. Save handwriting for dense material or multi‑step tasks.</div>
+          <div class="card"><strong>Passive copying is a trap:</strong> If writing becomes verbatim transcription, encoding benefits drop. Keep it <em>generative</em>: summarize, label, draw arrows, write mini‑explanations.</div>
+          <div class="card"><strong>Cognitive load balance:</strong> Writing itself takes effort. If a lecture is <em>very</em> fast, consider structured templates (see below) to keep up while still transforming ideas.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="memory-experiment">
+      <div class="kicker">hands-on demo</div>
+      <h2>Try it Yourself</h2>
+      <article class="card" style="padding:20px">
+        <p><strong>How it works</strong> — You’ll do two quick rounds with <em>different</em> word lists:</p>
+        <ol style="margin-top:6px">
+          <li><strong>Round 1 (No Notes):</strong> 10 words flash on screen. Just look—don’t write. Then type what you remember.</li>
+          <li><strong>Round 2 (With Notes):</strong> New 10 words. This time, you may jot notes on paper. Then type what you remember.</li>
+        </ol>
+        <div class="tip" style="margin:14px 0">
+          <div><strong>Heads-up:</strong> In the Morrison &amp; Richmond (2020) study, items were <em>letters</em> not words. Using words here keeps it fun; the offloading effect is usually even stronger with letters.</div>
+        </div>
+      
+        <!-- Controls -->
+        <div class="actions" style="gap:12px">
+          <button class="btn btn-accent" id="startR1Btn">Start Round 1 (No Notes)</button>
+          <button class="btn btn-ghost" id="startR2Btn" disabled>Start Round 2 (With Notes)</button>
+        </div>
+      
+        <!-- Live area -->
+        <div id="expArea" style="margin-top:14px">
+          <div id="timer" class="pill" style="display:none">Timer</div>
+          <div id="wordBox" class="card" style="margin-top:10px; display:none">
+            <div id="words" style="font-size:18px; letter-spacing:.4px"></div>
+          </div>
+        
+          <div id="recallBox" style="display:none; margin-top:10px">
+            <label for="recallInput"><strong>Type every word you remember</strong> (space or comma separated):</label>
+            <textarea id="recallInput" rows="4" style="width:100%; margin-top:8px"></textarea>
+            <div class="actions" style="margin-top:8px">
+              <button class="btn btn-accent" id="submitRecallBtn">Submit Recall</button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Results -->
+        <div id="results" style="display:none; margin-top:16px">
+          <h3 style="margin:0 0 6px">Your Results</h3>
+          <div id="r1Line" style="margin:6px 0"></div>
+          <div id="r2Line" style="margin:6px 0"></div>
+        
+          <!-- Simple bars -->
+          <div style="margin:12px 0">
+            <div style="font-size:12px; color:var(--muted)">Comparison</div>
+            <div style="display:flex; gap:10px; align-items:center; margin-top:6px">
+              <div style="flex:1">
+                <div style="height:10px; background:rgba(255,255,255,.08); border-radius:999px; overflow:hidden">
+                  <div id="barR1" style="height:10px; width:0%; background:linear-gradient(90deg,#ef4444,#f59e0b)"></div>
+                </div>
+                <div style="font-size:12px; margin-top:4px">Round 1 (No Notes)</div>
+              </div>
+              <div style="flex:1">
+                <div style="height:10px; background:rgba(255,255,255,.08); border-radius:999px; overflow:hidden">
+                  <div id="barR2" style="height:10px; width:0%; background:linear-gradient(90deg,#06b6d4,#818cf8)"></div>
+                </div>
+                <div style="font-size:12px; margin-top:4px">Round 2 (With Notes)</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="deltaLine" class="pill" style="margin-top:8px">Δ: —</div>
+          <div class="tip" style="margin-top:12px">
+            <div><strong>Interpretation:</strong> Bigger lists strain working memory. Writing acts as <em>cognitive offloading</em>, which is why Round 2 often scores higher.</div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+
+    <section class="section">
+      <div class="kicker">make it practical</div>
+      <h2>How to apply this (scenarios &amp; templates)</h2>
+      <div class="grid" style="grid-template-columns:1fr; gap:14px">
+        <article class="card">
+          <h3>During lectures</h3>
+          <p><strong>Use:</strong> Cornell‑style notes + margins for “teach‑back.”</p>
+          <p><strong>Template:</strong> <em>Key idea → Why it matters → Tiny example → My words:</em> ____</p>
+          <p><strong>Checkpoint:</strong> End with a <em>five‑line summary</em> before you leave.</p>
+        </article>
+        <article class="card">
+          <h3>Reading dense articles</h3>
+          <p><strong>Use:</strong> One‑minute mind‑map per section.</p>
+          <p><strong>Template:</strong> Center bubble = topic; branches = claims, evidence, terms; add arrows for cause→effect.</p>
+          <p><strong>Checkpoint:</strong> Write <em>three bullets from memory</em> after each section.</p>
+        </article>
+        <article class="card">
+          <h3>Problem‑solving &amp; math</h3>
+          <p><strong>Use:</strong> Worked‑example notebook.</p>
+          <p><strong>Template:</strong> <em>Given → Goal → Plan → Steps → Why each step works</em></p>
+          <p><strong>Checkpoint:</strong> Cover the solution and <em>re‑derive</em> it by hand.</p>
+        </article>
+        <article class="card">
+          <h3>Language &amp; vocab</h3>
+          <p><strong>Use:</strong> Handwritten flash lines.</p>
+          <p><strong>Template:</strong> Word • Pronunciation • One example sentence • Quick sketch.</p>
+          <p><strong>Checkpoint:</strong> Shuffle and write from memory for 60 seconds.</p>
+        </article>
+        <article class="card">
+          <h3>Work/meetings</h3>
+          <p><strong>Use:</strong> Decision log.</p>
+          <p><strong>Template:</strong> <em>Context → Options considered → Decision → Next steps (who/when)</em></p>
+          <p><strong>Checkpoint:</strong> End with a <em>one‑page brief</em> in your own words.</p>
+        </article>
+      </div>
+      <div class="tips" style="margin-top:14px">
+        <div class="tip"><div><strong>Speed helpers:</strong> Abbreviations, arrows (→, ⇄), tiny diagrams. Capture <em>ideas</em>, not every sentence.</div></div>
+        <div class="tip"><div><strong>Tablet/stylus counts:</strong> You still get the handwriting benefits with a pen‑like stylus—focus on <em>generative</em> writing.</div></div>
+        <div class="tip"><div><strong>Review rhythm:</strong> 24‑hour quick scan → end‑of‑week five‑line roll‑up → pre‑exam hand‑written practice test.</div></div>
+      </div>
+    </section>
+
+    <section class="section sources" aria-label="sources">
+      <h2 style="margin-bottom:6px">Sources</h2>
+      <ul>
+        <li>Fiorella, L., & Mayer, R. E. (2016). Eight Ways to Promote Generative Learning.Educational Psychology Review, 28(4), 717–741. https://doi.org/10.1007/s10648-015-9348-9</li>
+        <li>Morrison, A. B., & Richmond, L. L. (2020). Offloading items from memory: individual differences in cognitive offloading in a short-term memory task. Cognitive Research: Principles and Implications, 5(1), Article 1. https://doi.org/10.1186/s41235-019-0201-4</li>
+        <li>Marano, G., Kotzalidis, G. D., Lisci, F. M., Anesini, M. B., Rossi, S., Barbonetti, S., Cangini, A., Ronsisvalle, A., Artuso, L., Falsini, C., Caso, R., Mandracchia, G., Brisi, C., Traversi, G., Mazza, O., Pola, R., Sani, G., Mercuri, E. M., Gaetani, E., & Mazza, M. (2025). The Neuroscience Behind Writing: Handwriting vs. Typing-Who Wins the Battle? Life (Basel, Switzerland), 15(3), Article 345. https://doi.org/10.3390/life15030345</li>
+        <li>Mangen, A., Anda, L. G., Oxborough, G. H., & Brønnick, K. (2015). Handwriting versus  keyboard writing: Effect on word recall. Journal of Writing Research, 7(2), 227–247. https://doi.org/10.17239/jowr-2015.07.02.1</li>
+        <li>Van der Weel, F. R. (Ruud), & Van der Meer, A. L. H. (2023). Handwriting but nottypewriting leads to widespread brain connectivity: a high-density EEG study with implications for the classroom. Frontiers in Psychology, 14, Article 1219945. https://doi.org/10.3389/fpsyg.2023.1219945</li>
+        <li>Jansen, R. S., Lakens, D., & IJsselsteijn, W. A. (2017). An integrative review of the cognitive costs and benefits of note-taking. Educational Research Review, 22, 223–233. https://doi.org/10.1016/j.edurev.2017.10.001</li>
+        <li>Mueller, P. A., & Oppenheimer, D. M. (2014). The Pen Is Mightier Than the Keyboard: Advantages of Longhand Over Laptop Note Taking. Psychological Science, 25(6), 1159–1168. https://doi.org/10.1177/0956797614524581</li>
+      </ul>
+    </section>
+
+    <footer>
+      <div>Made for a lay audience • Print‑friendly • Accessible</div>
+      <div>
+        <a href="#" onclick="window.print()">Save as PDF</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const shareBtn = document.getElementById('shareBtn');
+    shareBtn?.addEventListener('click', async () => {
+      try{
+        if(navigator.share){
+          await navigator.share({title:document.title, text:'Write It Down, Remember More — why handwriting helps you learn', url:location.href});
+        }else{
+          await navigator.clipboard.writeText(location.href);
+          shareBtn.textContent = 'Link copied!';
+          setTimeout(()=>shareBtn.textContent='Share',1200);
+        }
+      }catch(e){
+        console.log(e);
+      }
+    });
+  </script>
+
+  <script>
+    const root = document.documentElement;
+    const btn  = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme') || 'dark';
+    if(saved === 'light'){ root.setAttribute('data-theme','light'); btn.textContent = 'Dark theme'; }
+    btn?.addEventListener('click', () => {
+      const light = root.getAttribute('data-theme') === 'light';
+      root.setAttribute('data-theme', light ? 'dark' : 'light');
+      localStorage.setItem('theme', light ? 'dark' : 'light');
+      btn.textContent = light ? 'Light theme' : 'Dark theme';
+    });
+  </script>
+
+  <script>
+(function(){
+  // ——— Config ———
+  const SHOW_SECONDS = 15;          // how long to display the words
+  const LIST_SIZE    = 10;          // words per round
+
+  // A pool of easy, concrete words
+  const WORD_POOL = [
+    "apple","river","mountain","cloud","pencil","clock","tiger","moon","garden","paper",
+    "glass","window","train","guitar","chair","ocean","forest","camera","bridge","flower",
+    "planet","tablet","notebook","engine","rocket","butter","candle","scooter","sand","pebble",
+    "wallet","mirror","shadow","ladder","helmet","tower","valley","copper","silver","blanket",
+    "bucket","cabbage","castle","canyon","tunnel","anchor","saddle","harbor","garage","lantern",
+    "sketch","signal","parcel","wallet","ticket","needle","marble","pillow","whistle","sponge"
+  ];
+
+  // ——— State ———
+  let round = 0;              // 0 none, 1 R1, 2 R2
+  let listR1 = [], listR2 = [];
+  let scoreR1 = null, scoreR2 = null;
+  let hideTimer = null, tickTimer = null;
+  let timeLeft = SHOW_SECONDS;
+
+  // ——— DOM ———
+  const startR1Btn = document.getElementById('startR1Btn');
+  const startR2Btn = document.getElementById('startR2Btn');
+  const timerEl    = document.getElementById('timer');
+  const wordBox    = document.getElementById('wordBox');
+  const wordsEl    = document.getElementById('words');
+  const recallBox  = document.getElementById('recallBox');
+  const recallInput= document.getElementById('recallInput');
+  const submitBtn  = document.getElementById('submitRecallBtn');
+  const resultsBox = document.getElementById('results');
+  const r1Line     = document.getElementById('r1Line');
+  const r2Line     = document.getElementById('r2Line');
+  const barR1      = document.getElementById('barR1');
+  const barR2      = document.getElementById('barR2');
+  const deltaLine  = document.getElementById('deltaLine');
+
+  // ——— Helpers ———
+  function sampleWords(n){
+    const pool = [...new Set(WORD_POOL)]; // uniqueness
+    for(let i=pool.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [pool[i],pool[j]]=[pool[j],pool[i]]; }
+    return pool.slice(0,n);
+  }
+  function showWords(list){
+    wordsEl.textContent = list.join("  •  ");
+    wordBox.style.display = 'block';
+    timerEl.style.display = 'inline-flex';
+    timeLeft = SHOW_SECONDS;
+    timerEl.textContent = `Words visible: ${timeLeft}s`;
+    tickTimer = setInterval(()=>{
+      timeLeft -= 1;
+      timerEl.textContent = `Words visible: ${timeLeft}s`;
+    },1000);
+    hideTimer = setTimeout(hideWords, SHOW_SECONDS*1000);
+  }
+  function hideWords(){
+    clearInterval(tickTimer);
+    wordBox.style.display = 'none';
+    timerEl.style.display = 'none';
+    recallInput.value = '';
+    recallBox.style.display = 'block';
+    recallInput.focus();
+  }
+  function scoreRecall(recalled, correctList){
+    const clean = recalled
+      .toLowerCase()
+      .replace(/[,.;\n\r]+/g,' ')
+      .split(/\s+/)
+      .filter(Boolean);
+    const unique = [...new Set(clean)];
+    let score = 0;
+    correctList.forEach(w => { if(unique.includes(w.toLowerCase())) score += 1; });
+    return {score, total: correctList.length, pct: Math.round((score/correctList.length)*100)};
+  }
+  function endIfDone(){
+    if(scoreR1!=null && scoreR2!=null){
+      resultsBox.style.display = 'block';
+      r1Line.innerHTML = `<strong>Round 1 (No Notes):</strong> ${scoreR1.score}/${scoreR1.total} = <strong>${scoreR1.pct}%</strong>`;
+      r2Line.innerHTML = `<strong>Round 2 (With Notes):</strong> ${scoreR2.score}/${scoreR2.total} = <strong>${scoreR2.pct}%</strong>`;
+      barR1.style.width = scoreR1.pct + '%';
+      barR2.style.width = scoreR2.pct + '%';
+      const diff = scoreR2.pct - scoreR1.pct;
+      const sign = diff>0?'+':'';
+      deltaLine.textContent = `Δ With Notes − No Notes: ${sign}${diff}%`;
+      // Scroll to results
+      resultsBox.scrollIntoView({behavior:'smooth', block:'nearest'});
+    }
+  }
+
+  // ——— Handlers ———
+  startR1Btn?.addEventListener('click', ()=>{
+    round = 1;
+    listR1 = sampleWords(LIST_SIZE);
+    resultsBox.style.display = 'none';
+    recallBox.style.display = 'none';
+    startR1Btn.disabled = true;
+    startR2Btn.disabled = true;
+    showWords(listR1);
+  });
+
+  startR2Btn?.addEventListener('click', ()=>{
+    round = 2;
+    listR2 = sampleWords(LIST_SIZE);
+    recallBox.style.display = 'none';
+    startR2Btn.disabled = true;
+    showWords(listR2);
+  });
+
+  submitBtn?.addEventListener('click', ()=>{
+    const recalled = recallInput.value.trim();
+    if(!recalled){ alert('Type what you remember first.'); return; }
+    recallBox.style.display = 'none';
+    if(round===1){
+      scoreR1 = scoreRecall(recalled, listR1);
+      startR2Btn.disabled = false;
+      startR2Btn.focus();
+    }else if(round===2){
+      scoreR2 = scoreRecall(recalled, listR2);
+    }
+    endIfDone();
+  });
+
+  // If user navigates away mid-timer
+  window.addEventListener('beforeunload', ()=>{ clearTimeout(hideTimer); clearInterval(tickTimer); });
+})();
+</script>
+
+
+</body>
+</html>
